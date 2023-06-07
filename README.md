@@ -1,46 +1,36 @@
 # Pewlett Hackard Employee Database Analysis
-This repository contains my solution to the Pewlett Hackard employee database project. The project is divided into three parts: data modeling, data engineering, and data analysis.
 
-Background
+## Background
+As a newly hired data engineer at Pewlett Hackard, my first major task was to conduct a research project on the employees employed during the 1980s and 1990s. The company provided six CSV files containing the employee database from that period. My objective was to design tables, import the CSV files into a SQL database, and analyze the data.
 
-As a new data engineer at Pewlett Hackard, my task is to analyze the employee database from the 1980s and 1990s. There are six CSV files available for analysis. The objective of this project is to design a database schema to store the data, import the CSV files into a SQL database, and answer various questions about the data using SQL queries.
+## Repository Setup
+To set up the project repository, I followed these steps:
 
-Repository Structure
+1. Created a new repository named "sql-challenge" specifically for this project.
+2. Cloned the repository to my local machine.
+3. Inside the local Git repository, created a directory named "EmployeeSQL" for this challenge.
 
-data/: This folder contains the six CSV files for the project.
-Results/: This folder contains the SQL queries for creating tables, importing data, and performing analysis.
-images/: This folder contains the ERD diagram generated using QuickDBD.
+## Data Modeling
+Before proceeding with data engineering and analysis, I inspected the CSV files and sketched an Entity Relationship Diagram (ERD) to visualize the table relationships. I used QuickDBD, an external tool, to create the ERD.
 
-Data Modeling
+## Data Engineering
+In the data engineering phase, I created a table schema for each of the six CSV files provided. Here are the key points to note:
 
-I started by inspecting the CSV files and sketching an Entity Relationship Diagram (ERD) of the tables using a tool like QuickDBD. The ERD diagram can be found in the images/ folder. It shows the relationships between the tables and their attributes.
+* Specified appropriate data types, primary keys, foreign keys, and other constraints.
+* Ensured that primary keys were unique and created composite keys when necessary.
+* Created tables in the correct order to handle foreign keys.
+* Imported each CSV file into its corresponding SQL table.
 
-Data Engineering
+## Data Analysis
+After completing the data engineering phase, I conducted data analysis to answer specific questions about the employee data. Here are the queries I executed:
 
-Using the information obtained from the ERD diagram, I created a table schema for each of the six CSV files. I made sure to specify the data types, primary keys, foreign keys, and other constraints. I also verified that each primary key column was unique, and created a composite key where necessary. I then created the tables in the correct order to handle the foreign keys. Finally, I imported each CSV file into its corresponding SQL table.
+1. Listed the employee number, last name, first name, sex, and salary of each employee.
+2. Listed the first name, last name, and hire date for the employees hired in 1986.
+3. Listed the manager of each department along with their department number, department name, employee number, last name, and first name.
+4. Listed the department number for each employee along with their employee number, last name, first name, and department name.
+5. Listed the first name, last name, and sex of each employee whose first name is Hercules and last name begins with the letter B.
+6. Listed each employee in the Sales department, including their employee number, last name, and first name.
+7. Listed each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
+8. Listed the frequency counts, in descending order, of all employee last names to determine how many employees share each last name.
 
-Data Analysis
-
-Using the SQL database created in the previous step, I wrote several SQL queries to answer the following questions:
-
-List the employee number, last name, first name, sex, and salary of each employee.
-
-List the first name, last name, and hire date for the employees who were hired in 1986.
-
-List the manager of each department along with their department number, department name, employee number, last name, and first name.
-
-List the department number for each employee along with that employee's employee number, last name, first name, and department name.
-
-List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
-
-List each employee in the Sales department, including their employee number, last name, and first name.
-
-List each employee in the Sales and Development departments, including their employee number, last name, first name, and department name.
-
-List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
-
-The SQL queries can be found in the EmployeeSQL/queries.sql file.
-
-Conclusion
-
-This project required me to create a database schema to store the Pewlett Hackard employee database from the 1980s and 1990s. I also had to import the data into a SQL database and answer various questions about the data using SQL queries. This project helped me to enhance my data modeling, data engineering, and data analysis skills.
+The data analysis provided insights into employee details and facilitated further exploration of the dataset.
